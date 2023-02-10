@@ -173,7 +173,7 @@ p {
     fill: var(--background-color);
     }
 
-    .container {
+ .container {
         max-width: 1200px;
         padding: 0 15px;
         margin: 0 auto;
@@ -182,7 +182,7 @@ p {
 /* Header */
 
 .header {
-     max-width: 1600px;
+    max-width: 1600px;
     border-bottom: 1px solid #ececec;
     text-align: center;
     margin: 0 auto;
@@ -204,19 +204,18 @@ p {
     padding: 24px 0;
 }
 
-.nav-links {
+.nav-header {
     display: flex;
     gap: 50px;
     margin-left: 93px;
 }
 
-.nav-header {
+.nav-links {
     font-weight: 500;
     line-height: 1, 2;
     color: var(--title-text-color);
     padding-top: 32px;
     padding-bottom: 32px;
-    /* margin-right: 50px; */
     position: relative;
     display: block;
     font-weight: 500;
@@ -229,8 +228,23 @@ p {
     color: var(--title-text-color);
     transition: color var(--anim-icon);
 }
+.nav-links:hover,
+.nav-links:focus {
+    color: var(--accent-color);
+}
 
-.nav-header-contact {
+.nav-links.current {
+    color: var(--accent-color);
+}
+.nav-adress {
+    display: flex;
+}
+
+.nav-adress li:not(:first-child) {
+    padding-left: 50px;
+}
+
+.nav-contact {
     font-weight: 500;
     line-height: 1, 2;
     color: var(--text-color);
@@ -245,29 +259,9 @@ p {
     fill: currentColor;
 }
 
-.nav-header:hover,
-.nav-header:focus {
+.nav-contact:hover,
+.nav-contact:focus {
     color: var(--accent-color);
-}
-
-
-.nav-header.current {
-    color: var(--accent-color);
-}
-
-.nav-header-contact:hover,
-.nav-header-contact:focus {
-    color: var(--accent-color);
-}
-
-
-
-.nav-adress {
-    display: flex;
-}
-
-.nav-adress li:not(:first-child) {
-    padding-left: 50px;
 }
 
 
@@ -300,7 +294,6 @@ p {
         url('../images/webstudio.jpg');
 }
 
-
 .hero-title {
     font-weight: 900;
     font-size: 44px;
@@ -309,7 +302,6 @@ p {
     letter-spacing: 0.06em;
     text-transform: uppercase;
     color: var(--background-color);
-    /* padding-top: 200px; */
     padding-bottom: 30px;
     margin-bottom: 0px;
     margin-top: 0;
