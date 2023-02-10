@@ -2,25 +2,28 @@
     --text-color: #757575;
     --title-text-color: #212121;
     --accent-color: #2196f3;
+    --aktiv-color: #188ce8;
     --footer-color: #2f303a;
     --background-color: #ffffff;
     --accent-background-color: #f5f4fa;
     --conteiner-color: #eeeeee;
     --logo-color: black;
     --social-icon-color: #AFB1B8;
-    --anim-icon: transition-property:color;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    --anim-icon: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* основні */
+a {
+    text-decoration: none;
+color: inherit;
+}
 body {
     color: var(--text-color);
     background-color: var(--background-color);
     font-family: Roboto, sans-serif;
     font-size: 14px;
     letter-spacing: 0.03em;
-}
+    }
 
 button {
     font-family: inherit;
@@ -33,20 +36,6 @@ button {
     padding: 0;
     border: none;
     cursor: pointer;
-}
-
-/* Приховати заголовок */
-.visually-hidden {
-    position: absolute;
-    white-space: nowrap;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-    border: 0;
-    padding: 0;
-    clip: rect(0 0 0 0);
-    clip-path: inset(50%);
-    margin: -1px;
 }
 
 ul,
@@ -73,13 +62,21 @@ h3,
 p {
     margin: 0;
 }
-
-.container {
-    max-width: 1200px;
-    padding-left: 15px;
-    padding-right: 15px;
-    margin: 0 auto;
+/* Приховати заголовок */
+.visually-hidden {
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    margin: -1px;
 }
+
+
 
 .link {
     text-decoration: none;
@@ -96,12 +93,22 @@ p {
 }
 
 /* Logo */
-.logo-color {
+.nav-logo {
     font-family: Raleway;
     font-weight: 700px;
     font-size: 26px;
     line-height: 1.2;
     color: var(--accent-color);
+}
+.logo-header {
+   
+    color: var(--logo-color);
+}
+
+.logo-footer {
+    
+    color: var(--background-color);
+    margin-bottom: 20px;   
 }
 
 /*  buttons */
@@ -164,20 +171,42 @@ p {
 .icon-link:hover>.social-icons,
 .icon-link:focus>.social-icons {
     fill: var(--background-color);
-}
+    }
+
+    .container {
+        max-width: 1200px;
+        padding: 0 15px;
+        margin: 0 auto;
+    }   
 
 /* Header */
 
 .header {
+     max-width: 1600px;
     border-bottom: 1px solid #ececec;
+    text-align: center;
+    margin: 0 auto;
 }
 
-.logo-header {
-    font-family: Raleway;
-    font-weight: 700px;
-    font-size: 26px;
-    line-height: 1.2;
-    color: var(--logo-color);
+.header-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo {
+    padding: 24px 0;
+}
+
+.nav-links {
+    display: flex;
+    margin-left: 93px;
 }
 
 .nav-header {
@@ -230,19 +259,7 @@ p {
     color: var(--accent-color);
 }
 
-.nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
 
-.nav-link-block {
-    display: flex;
-}
-
-.nav-link-block>a {
-    padding: 24px 0;
-}
 
 .nav-adress {
     display: flex;
@@ -252,11 +269,6 @@ p {
     padding-left: 50px;
 }
 
-.nav-links {
-    display: flex;
-
-    margin-left: 93px;
-}
 
 /* полоска */
 .current::after {
@@ -315,7 +327,7 @@ p {
 
 .hero .button-aktion:hover,
 .hero .button-aktion:focus {
-    background-color: #188ce8;
+    background-color: var(--aktiv-color);
 }
 
 /* advatages */
@@ -522,18 +534,10 @@ p {
     color: var(--accent-color);
 }
 
-.logo-footer {
-    font-family: Raleway;
-    font-weight: 700px;
-    font-size: 26px;
-    line-height: 1.2;
-    color: var(--background-color);
-    display: block;
-    margin-bottom: 20px;
-}
 
 .footer-address {
     width: 231px;
+    margin-top: 20px;
 }
 
 .footer .container {
@@ -975,3 +979,5 @@ a {
     margin-left: 124px;
 
 }
+
+transition: color var(--anim-icon);
