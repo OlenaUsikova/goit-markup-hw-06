@@ -15,15 +15,16 @@
 /* основні */
 a {
     text-decoration: none;
-color: inherit;
+    color: inherit;
 }
+
 body {
     color: var(--text-color);
     background-color: var(--background-color);
     font-family: Roboto, sans-serif;
     font-size: 14px;
     letter-spacing: 0.03em;
-    }
+}
 
 button {
     font-family: inherit;
@@ -62,6 +63,7 @@ h3,
 p {
     margin: 0;
 }
+
 /* Приховати заголовок */
 .visually-hidden {
     position: absolute;
@@ -75,7 +77,6 @@ p {
     clip-path: inset(50%);
     margin: -1px;
 }
-
 
 
 .link {
@@ -100,15 +101,16 @@ p {
     line-height: 1.2;
     color: var(--accent-color);
 }
+
 .logo-header {
-   
+
     color: var(--logo-color);
 }
 
 .logo-footer {
-    
+
     color: var(--background-color);
-    margin-bottom: 20px;   
+    margin-bottom: 20px;
 }
 
 /*  buttons */
@@ -117,7 +119,7 @@ p {
     background-color: var(--accent-background-color);
     color: var(--title-text-color);
     display: inline-block;
-    transition: var(--anim-icon);
+    transition: color, background-color, box-shadow var(--anim-icon);
 }
 
 .button-aktion {
@@ -128,6 +130,12 @@ p {
     letter-spacing: 0.06em;
     display: inline-block;
     align-items: center;
+    transition: color, background-color, box-shadow, var(--anim-icon);
+}
+
+.button-aktion:hover,
+.button-aktion:focus {
+    background-color: var(--aktiv-color);
 }
 
 .button-ogdinary:hover,
@@ -159,30 +167,30 @@ p {
     width: 20px;
     height: 20px;
     fill: var(--social-icon-color);
+    transition: fill var(--anim-icon);
 }
 
 .icon-link:hover,
 .icon-link:focus {
     background-color: var(--accent-color);
-    /* transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); */
 }
 
 .icon-link:hover>.social-icons,
 .icon-link:focus>.social-icons {
     fill: var(--background-color);
-    }
+    transition: fill var(--anim-icon);
+}
 
- .container {
-        max-width: 1200px;
-        padding: 0 15px;
-        margin: 0 auto;
-    }   
+.container {
+    max-width: 1200px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
 
 /* Header */
 
 .header {
-    max-width: 1600px;
+    /* max-width: 1600px; */
     border-bottom: 1px solid #ececec;
     text-align: center;
     margin: 0 auto;
@@ -228,6 +236,7 @@ p {
     color: var(--title-text-color);
     transition: color var(--anim-icon);
 }
+
 .nav-links:hover,
 .nav-links:focus {
     color: var(--accent-color);
@@ -236,6 +245,7 @@ p {
 .nav-links.current {
     color: var(--accent-color);
 }
+
 .nav-adress {
     display: flex;
 }
@@ -278,7 +288,6 @@ p {
     background-color: var(--accent-color);
     border-radius: 2px;
     bottom: -1px;
-
 }
 
 
@@ -315,7 +324,7 @@ p {
     border-radius: 4px;
     background: var(--accent-color);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-    transition: color var(--anim-icon)
+    transition: color var(--anim-icon);
 }
 
 .hero .button-aktion:hover,
@@ -464,6 +473,7 @@ p {
     border-radius: 4px;
     outline: transparent;
     fill: var(--anim-icon);
+    transition: var(--anim-icon);
 }
 
 .clients-item {
@@ -474,7 +484,7 @@ p {
 .clients-icon {
     fill: var(--social-icon-color);
     text-align: center;
-    transition: var(--anim-icon)
+    transition: var(--anim-icon);
 }
 
 .client-link:hover .clients-icon,
@@ -501,7 +511,7 @@ p {
     color: var(--background-color);
     font-weight: 400;
     line-height: 1.7;
-    transition: color var(--anim-icon)
+    transition: color var(--anim-icon);
 }
 
 .light-text {
@@ -568,7 +578,7 @@ p {
     justify-content: center;
     background-color: rgba(255, 255, 255, 0.1);
     margin: 0;
-    transition: fill var(--anim-icon)
+    transition: var(--anim-icon);
 }
 
 .icon-link-footer:hover,
@@ -581,6 +591,7 @@ p {
     width: 20px;
     height: 20px;
     fill: var(--background-color);
+    transition: fill var(--anim-icon);
 }
 
 /* форма відправки */
@@ -631,11 +642,14 @@ p {
     padding-bottom: 10px;
     padding-left: 28px;
     border-color: transparent;
+    transition: background-color var(--anim-icon);
 }
+
 .subscription-btn:hover,
-.subscription-btn:focus { 
+.subscription-btn:focus {
     background-color: var(--aktiv-color);
-    border-color: 1px solid var(--aktiv-color); }
+    border-color: 1px solid var(--aktiv-color);
+}
 
 .subscription-icon {
     fill: var(--background-color);
@@ -679,13 +693,14 @@ p {
     gap: 8px;
     justify-content: center;
     margin-bottom: 50px;
+    transition: color, background-color, box-shadow, var(--anim-icon);
 }
 
 .portfolio-filter .button-ogdinary {
     padding: 6px 22px;
     border-radius: 4px;
     border: none;
-    transition: color var(--anim-icon);
+    transition: color, background-color, box-shadow, var(--anim-icon);
 }
 
 .portfolio-filter .button-ogdinary:hover,
@@ -772,11 +787,14 @@ p {
     min-height: 581px;
     background-color: var(--background-color);
     padding: 40px;
-    transition: color var(--anim-icon);
+    transition-property: transform;
+    transition-duration: 500ms;
+    transition-timing-function: linear;
+    transition-delay: 100ms;
 }
 
 .backdrop.is-hidden .modal {
-    transform: translate(-50%, -50%);
+    transform: translate(-20%, -30%) scale(0.7);
 }
 
 .modal-close-btn {
@@ -793,6 +811,7 @@ p {
 
 .close-icon {
     display: block;
+    transition: fill var(--anim-icon);
 }
 
 .modal-close-btn:hover .modal-close-btn:focus {
@@ -804,6 +823,7 @@ p {
 .modal-close-btn:focus>.close-icon {
     fill: var(--accent-color);
     color: var(--accent-color);
+    transition: fill, border, var(--anim-icon);
 }
 
 .modal-title {
@@ -833,6 +853,7 @@ p {
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
 }
+
 .modal-label>input {
     height: 40px;
     padding: 7px 0;
@@ -844,7 +865,6 @@ p {
 .modal-label>input:focus {
     border-color: var(--accent-color);
     outline: 1px solid transparent;
-    ;
 }
 
 .modal-label>input:hover~.modal-icon,
@@ -898,7 +918,7 @@ p {
 .modal-label-checkbox {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     /* justify-content: center; */
     margin-top: 30px;
     margin-left: 14px;
@@ -925,6 +945,7 @@ p {
     align-items: center;
     justify-content: center;
     transition: background-color, border-color 250ms linear;
+    margin-right: 8px;
 }
 
 .checkbox-icon {
@@ -961,9 +982,9 @@ p {
 
 }
 
-transition: color var(--anim-icon);
+/* transition: color var(--anim-icon);
 
 
 transition: color var(--anim-icon);
 --anim-icon: 250ms, cubic-bezier(0.4, 0, 0.2, 1);
-transition: fill 250ms cubic-bazier();
+transition: fill 250ms cubic-bazier(); */
